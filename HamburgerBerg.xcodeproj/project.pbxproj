@@ -15,6 +15,10 @@
 		B00AFC7E26E0086300CD6665 /* HamburgerBergUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC7D26E0086300CD6665 /* HamburgerBergUITests.swift */; };
 		B00AFC8D26E00ECB00CD6665 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B00AFC8C26E00ECB00CD6665 /* Alamofire */; };
 		B00AFC9026E010C500CD6665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC9226E010C500CD6665 /* Localizable.strings */; };
+		B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9526E012D000CD6665 /* PunkAPIService.swift */; };
+		B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9726E0132200CD6665 /* Endpoint.swift */; };
+		B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9C26E015FF00CD6665 /* Beer.swift */; };
+		B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9E26E0160B00CD6665 /* BeerID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		B00AFC7F26E0086300CD6665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00AFC9126E010C500CD6665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B00AFC9326E010D200CD6665 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B00AFC9526E012D000CD6665 /* PunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAPIService.swift; sourceTree = "<group>"; };
+		B00AFC9726E0132200CD6665 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B00AFC9C26E015FF00CD6665 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		B00AFC9E26E0160B00CD6665 /* BeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 		B00AFC5F26E0085E00CD6665 /* HamburgerBerg */ = {
 			isa = PBXGroup;
 			children = (
+				B00AFC9B26E0155500CD6665 /* Models */,
+				B00AFC9426E012C100CD6665 /* Services */,
 				B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */,
 				B00AFC6226E0085E00CD6665 /* ContentView.swift */,
 				B00AFC6426E0086300CD6665 /* Assets.xcassets */,
@@ -134,6 +144,24 @@
 				B00AFC7F26E0086300CD6665 /* Info.plist */,
 			);
 			path = HamburgerBergUITests;
+			sourceTree = "<group>";
+		};
+		B00AFC9426E012C100CD6665 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B00AFC9526E012D000CD6665 /* PunkAPIService.swift */,
+				B00AFC9726E0132200CD6665 /* Endpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B00AFC9B26E0155500CD6665 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B00AFC9C26E015FF00CD6665 /* Beer.swift */,
+				B00AFC9E26E0160B00CD6665 /* BeerID.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */,
+				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
+				B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */,
 				B00AFC6326E0085E00CD6665 /* ContentView.swift in Sources */,
+				B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */,
 				B00AFC6126E0085E00CD6665 /* HamburgerBergApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
