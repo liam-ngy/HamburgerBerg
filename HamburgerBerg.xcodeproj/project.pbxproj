@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		B00AFC6826E0086300CD6665 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC6726E0086300CD6665 /* Preview Assets.xcassets */; };
 		B00AFC7326E0086300CD6665 /* HamburgerBergTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC7226E0086300CD6665 /* HamburgerBergTests.swift */; };
 		B00AFC7E26E0086300CD6665 /* HamburgerBergUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC7D26E0086300CD6665 /* HamburgerBergUITests.swift */; };
+		B00AFC8D26E00ECB00CD6665 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B00AFC8C26E00ECB00CD6665 /* Alamofire */; };
+		B00AFC9026E010C500CD6665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC9226E010C500CD6665 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		B00AFC7926E0086300CD6665 /* HamburgerBergUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HamburgerBergUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00AFC7D26E0086300CD6665 /* HamburgerBergUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerBergUITests.swift; sourceTree = "<group>"; };
 		B00AFC7F26E0086300CD6665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00AFC9126E010C500CD6665 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B00AFC9326E010D200CD6665 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00AFC8D26E00ECB00CD6665 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,7 @@
 		B00AFC5426E0085E00CD6665 = {
 			isa = PBXGroup;
 			children = (
+				B00AFC9226E010C500CD6665 /* Localizable.strings */,
 				B00AFC5F26E0085E00CD6665 /* HamburgerBerg */,
 				B00AFC7126E0086300CD6665 /* HamburgerBergTests */,
 				B00AFC7C26E0086300CD6665 /* HamburgerBergUITests */,
@@ -146,6 +152,9 @@
 			dependencies = (
 			);
 			name = HamburgerBerg;
+			packageProductDependencies = (
+				B00AFC8C26E00ECB00CD6665 /* Alamofire */,
+			);
 			productName = HamburgerBerg;
 			productReference = B00AFC5D26E0085E00CD6665 /* HamburgerBerg.app */;
 			productType = "com.apple.product-type.application";
@@ -215,8 +224,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = B00AFC5426E0085E00CD6665;
+			packageReferences = (
+				B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = B00AFC5E26E0085E00CD6665 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00AFC6826E0086300CD6665 /* Preview Assets.xcassets in Resources */,
+				B00AFC9026E010C500CD6665 /* Localizable.strings in Resources */,
 				B00AFC6526E0086300CD6665 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +308,18 @@
 			targetProxy = B00AFC7A26E0086300CD6665 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B00AFC9226E010C500CD6665 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B00AFC9126E010C500CD6665 /* en */,
+				B00AFC9326E010D200CD6665 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B00AFC8026E0086300CD6665 /* Debug */ = {
@@ -580,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B00AFC8C26E00ECB00CD6665 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B00AFC5526E0085E00CD6665 /* Project object */;
 }
