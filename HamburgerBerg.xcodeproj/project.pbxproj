@@ -19,6 +19,9 @@
 		B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9726E0132200CD6665 /* Endpoint.swift */; };
 		B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9C26E015FF00CD6665 /* Beer.swift */; };
 		B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9E26E0160B00CD6665 /* BeerID.swift */; };
+		B00AFCA226E019D700CD6665 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFCA126E019D700CD6665 /* Logger.swift */; };
+		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
+		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		B00AFC9726E0132200CD6665 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B00AFC9C26E015FF00CD6665 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B00AFC9E26E0160B00CD6665 /* BeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerID.swift; sourceTree = "<group>"; };
+		B00AFCA126E019D700CD6665 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSerializingTests.swift; sourceTree = "<group>"; };
+		B0EA825026E115BA00A4190C /* BeerJSONExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerJSONExample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		B00AFC5F26E0085E00CD6665 /* HamburgerBerg */ = {
 			isa = PBXGroup;
 			children = (
+				B00AFCA026E019CB00CD6665 /* Logging */,
 				B00AFC9B26E0155500CD6665 /* Models */,
 				B00AFC9426E012C100CD6665 /* Services */,
 				B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */,
@@ -131,6 +138,8 @@
 		B00AFC7126E0086300CD6665 /* HamburgerBergTests */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA824F26E1159300A4190C /* TestData */,
+				B0EA824C26E1154100A4190C /* UnitTests */,
 				B00AFC7226E0086300CD6665 /* HamburgerBergTests.swift */,
 				B00AFC7426E0086300CD6665 /* Info.plist */,
 			);
@@ -162,6 +171,38 @@
 				B00AFC9E26E0160B00CD6665 /* BeerID.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B00AFCA026E019CB00CD6665 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				B00AFCA126E019D700CD6665 /* Logger.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		B0EA824B26E1153A00A4190C /* Serializing */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */,
+			);
+			path = Serializing;
+			sourceTree = "<group>";
+		};
+		B0EA824C26E1154100A4190C /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA824B26E1153A00A4190C /* Serializing */,
+			);
+			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		B0EA824F26E1159300A4190C /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA825026E115BA00A4190C /* BeerJSONExample.json */,
+			);
+			path = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +347,7 @@
 				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
 				B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */,
 				B00AFC6326E0085E00CD6665 /* ContentView.swift in Sources */,
+				B00AFCA226E019D700CD6665 /* Logger.swift in Sources */,
 				B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */,
 				B00AFC6126E0085E00CD6665 /* HamburgerBergApp.swift in Sources */,
 			);
@@ -315,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00AFC7326E0086300CD6665 /* HamburgerBergTests.swift in Sources */,
+				B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,29 +1,31 @@
 import Foundation
+import os.log
 
 /// For having a model of BeerID, we have a type check for ID and have a safer way to represent the model
 struct BeerID: RawRepresentable, Hashable, Codable {
   // MARK: - Properties
 
-  let rawValue: String
+  let rawValue: Int
 
   // MARK: - Initializer
 
-  init(rawValue: String) {
+  init(rawValue: Int) {
     self.rawValue = rawValue
   }
 }
 
-extension BeerID: ExpressibleByStringLiteral {
-
+extension BeerID: ExpressibleByIntegerLiteral , CustomDebugStringConvertible {
   /// Initializes a `BeerID` from a string literal, e.g.:
   /// ```
-  /// let BeerID: BeerID = "foo-bar"
+  /// let BeerID: BeerID = 1
   /// ```
   /// Instead of:
   /// ```
-  /// let BeerID: BeerID = .init(rawValue: "foo-bar")
+  /// let BeerID: BeerID = .init(rawValue: 1)
   /// ```
-  public init(stringLiteral rawValue: String) {
+  public init(integerLiteral rawValue: Int) {
     self.init(rawValue: rawValue)
   }
+
+  var debugDescription: String { String(rawValue) }
 }
