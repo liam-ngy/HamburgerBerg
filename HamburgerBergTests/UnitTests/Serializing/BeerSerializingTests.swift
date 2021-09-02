@@ -18,7 +18,7 @@ final class BeerSerializingTests: XCTestCase {
   }
 
   func test_beer_decoding() throws {
-    XCTAssertNoThrow(try decoder.decode(Beer.self, from: data))
+    XCTAssertNoThrow(try decoder.decode([Beer].self, from: data))
   }
 
   private func jsonData() throws -> Data {

@@ -1,33 +1,27 @@
 import Alamofire
 import Combine
 import os.log
+import Foundation
 
 //protocol PunkAPI {
 //  func fetchBeers() -> AnyPublisher<[Beer], AFError>
 //}
 
 final class PunkAPIService {
+  static var decoder: JSONDecoder {
+    let decoder = JSONDecoder()
+    return decoder
+  }
   private let beersURL = "https://api.punkapi.com/v2/beers"
 
-//  func fetchBeers() -> AnyPublisher<[Beer], AFError> {
-//    os_log("Start to fetch list of beer", type: .info)
-//
-//    return AF.request(self.beersURL, method: .get)
-//      .validate(statusCode: 200..<300)
-//      .validate(contentType: ["application/json"])
-//      .publishDecodable(type: [Beer].self)
-//      .value()
-//  }
+  func fetchBeers() -> AnyPublisher<[Beer], AFError> {
+    beerLog("Start to fetch list of beer", .networking, .info)
 
-  func fetchBeers() {
-    os_log("Start to fetch list of beer", type: .info)
-
-    AF.request(self.beersURL, method: .get)
+    return AF.request(self.beersURL, method: .get)
       .validate(statusCode: 200..<300)
       .validate(contentType: ["application/json"])
-      .responseJSON { response in
-        print(response)
-      }
+      .publishDecodable(type: [Beer].self)
+      .value()
   }
 }
 

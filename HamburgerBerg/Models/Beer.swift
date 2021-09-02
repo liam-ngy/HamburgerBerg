@@ -30,13 +30,14 @@ extension Beer {
     return dateFormatter
   }
 
+  // I could use `.convertFromSnakeCase` but in this case I wanted to customize `imageURL` as well
   private enum CodingKeys: String, CodingKey {
     case id
     case name
     case tagline
-    case firstBrewed
+    case firstBrewed = "first_brewed"
     case description
-    case imageURL = "imageUrl" // -> image_url
+    case imageURL = "image_url"
   }
 
   init(from decoder: Decoder) throws {
