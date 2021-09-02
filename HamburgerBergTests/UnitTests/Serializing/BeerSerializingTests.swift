@@ -9,7 +9,6 @@ final class BeerSerializingTests: XCTestCase {
     override func setUpWithError() throws {
       data = try jsonData()
       decoder = JSONDecoder()
-      decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
 
   override func tearDownWithError() throws {

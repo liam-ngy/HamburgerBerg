@@ -22,6 +22,7 @@
 		B00AFCA226E019D700CD6665 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFCA126E019D700CD6665 /* Logger.swift */; };
 		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
 		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
+		B0EA825426E1226400A4190C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA825326E1226400A4190C /* EndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B00AFCA126E019D700CD6665 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSerializingTests.swift; sourceTree = "<group>"; };
 		B0EA825026E115BA00A4190C /* BeerJSONExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerJSONExample.json; sourceTree = "<group>"; };
+		B0EA825326E1226400A4190C /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EA824B26E1153A00A4190C /* Serializing */,
+				B0EA825326E1226400A4190C /* EndpointTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00AFC7326E0086300CD6665 /* HamburgerBergTests.swift in Sources */,
+				B0EA825426E1226400A4190C /* EndpointTests.swift in Sources */,
 				B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
