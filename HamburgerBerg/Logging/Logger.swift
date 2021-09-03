@@ -23,12 +23,22 @@ func beerLog(
   _ category: LogCategory = .default,
   _ type: OSLogType = .default
 ) {
+
+  let emoji: String
+  if type == .info {
+    emoji = "ℹ️ "
+  } else {
+    emoji = ""
+  }
+
+  let newMessage = emoji + message
+
   os_log(
     "[%{public}@/%{public}@:%{public}@] %{public}@",
     log: OSLog(subsystem: .subsystem, category: category.rawValue),
     type: type,
     (file as NSString).lastPathComponent,
     function, "\(line)",
-    message
+    newMessage
   )
 }

@@ -20,9 +20,11 @@
 		B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9C26E015FF00CD6665 /* Beer.swift */; };
 		B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9E26E0160B00CD6665 /* BeerID.swift */; };
 		B00AFCA226E019D700CD6665 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFCA126E019D700CD6665 /* Logger.swift */; };
+		B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0697AAC26E22933003DAF5D /* BeerRowView.swift */; };
 		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
 		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
 		B0EA825426E1226400A4190C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA825326E1226400A4190C /* EndpointTests.swift */; };
+		B0EA825A26E1822000A4190C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA825926E1822000A4190C /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +64,11 @@
 		B00AFC9C26E015FF00CD6665 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B00AFC9E26E0160B00CD6665 /* BeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerID.swift; sourceTree = "<group>"; };
 		B00AFCA126E019D700CD6665 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0697AAC26E22933003DAF5D /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
 		B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSerializingTests.swift; sourceTree = "<group>"; };
 		B0EA825026E115BA00A4190C /* BeerJSONExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerJSONExample.json; sourceTree = "<group>"; };
 		B0EA825326E1226400A4190C /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		B0EA825926E1822000A4190C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +121,12 @@
 		B00AFC5F26E0085E00CD6665 /* HamburgerBerg */ = {
 			isa = PBXGroup;
 			children = (
+				B0697AAB26E228F6003DAF5D /* Views */,
 				B00AFCA026E019CB00CD6665 /* Logging */,
 				B00AFC9B26E0155500CD6665 /* Models */,
+				B0EA825826E181F900A4190C /* ViewModels */,
 				B00AFC9426E012C100CD6665 /* Services */,
 				B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */,
-				B00AFC6226E0085E00CD6665 /* ContentView.swift */,
 				B00AFC6426E0086300CD6665 /* Assets.xcassets */,
 				B00AFC6926E0086300CD6665 /* Info.plist */,
 				B00AFC6626E0086300CD6665 /* Preview Content */,
@@ -183,10 +188,20 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		B0697AAB26E228F6003DAF5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B00AFC6226E0085E00CD6665 /* ContentView.swift */,
+				B0697AAC26E22933003DAF5D /* BeerRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B0EA824B26E1153A00A4190C /* Serializing */ = {
 			isa = PBXGroup;
 			children = (
 				B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */,
+				B0EA825326E1226400A4190C /* EndpointTests.swift */,
 			);
 			path = Serializing;
 			sourceTree = "<group>";
@@ -194,8 +209,8 @@
 		B0EA824C26E1154100A4190C /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				B0EA825526E13D2A00A4190C /* Services */,
 				B0EA824B26E1153A00A4190C /* Serializing */,
-				B0EA825326E1226400A4190C /* EndpointTests.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -206,6 +221,21 @@
 				B0EA825026E115BA00A4190C /* BeerJSONExample.json */,
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		B0EA825526E13D2A00A4190C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B0EA825826E181F900A4190C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0EA825926E1822000A4190C /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +304,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					B00AFC5C26E0085E00CD6665 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -349,9 +379,11 @@
 				B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */,
 				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
 				B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */,
+				B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */,
 				B00AFC6326E0085E00CD6665 /* ContentView.swift in Sources */,
 				B00AFCA226E019D700CD6665 /* Logger.swift in Sources */,
 				B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */,
+				B0EA825A26E1822000A4190C /* ListViewModel.swift in Sources */,
 				B00AFC6126E0085E00CD6665 /* HamburgerBergApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -453,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -467,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -508,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -528,7 +562,7 @@
 				DEVELOPMENT_TEAM = Y4T2P735RZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HamburgerBerg/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,7 +584,7 @@
 				DEVELOPMENT_TEAM = Y4T2P735RZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = HamburgerBerg/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

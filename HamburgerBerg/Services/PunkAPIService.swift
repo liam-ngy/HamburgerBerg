@@ -3,16 +3,16 @@ import Combine
 import os.log
 import Foundation
 
-//protocol PunkAPI {
-//  func fetchBeers() -> AnyPublisher<[Beer], AFError>
-//}
+// Mock Alamofire response
+// https://github.com/WeTransfer/Mocker#alamofire
 
-final class PunkAPIService {
-  static var decoder: JSONDecoder {
-    let decoder = JSONDecoder()
-    return decoder
-  }
 
+protocol PunkServiceProtocol {
+  func fetchBeers() -> AnyPublisher<[Beer], AFError>
+}
+
+final class PunkAPIService: PunkServiceProtocol {
+  @discardableResult
   func fetchBeers() -> AnyPublisher<[Beer], AFError> {
     beerLog("Start to fetch list of beer", .networking, .info)
 
