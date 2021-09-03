@@ -11,7 +11,7 @@ import SwiftUI
 struct HamburgerBergApp: App {
     var body: some Scene {
         WindowGroup {
-          ContentView(viewModel: ListViewModel())
+          ListBeerView(viewModel: .list)
         }
     }
 }

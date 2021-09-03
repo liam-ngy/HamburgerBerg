@@ -16,7 +16,7 @@ final class PunkAPIService: PunkServiceProtocol {
   func fetchBeers() -> AnyPublisher<[Beer], AFError> {
     beerLog("Start to fetch list of beer", .networking, .info)
 
-    guard let url =  Endpoint(path: "/beers", queryItems: []).url  else {
+    guard let url =  Endpoint(path: [.beers], queryItems: []).url  else {
       fatalError("App is ambiguous because of invalid beers url endpoint.")
     }
 

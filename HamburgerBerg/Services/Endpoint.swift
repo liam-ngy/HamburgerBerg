@@ -7,8 +7,19 @@ struct Endpoint {
     case v2 = "v2"
   }
 
+  enum PathComponent: String  {
+    case beers = "/beers"
+  }
+
   let version: Version = .v2
-  let path: String
+  let path: [PathComponent]
+
+  private var combinedPathComponents: String {
+    path.reduce("") { partialResult, pathComponent in
+      partialResult + pathComponent.rawValue
+    }
+  }
+
   let queryItems: [URLQueryItem]
 
   var url: URL? {
@@ -16,11 +27,12 @@ struct Endpoint {
     components.scheme = "https"
     // Adding a dynamic versioning would be a nice way to do as well
     components.host = "api.punkapi.com"
-    components.path = "/\(version.rawValue)" + path
+    components.path = "/\(version.rawValue)" + combinedPathComponents
     components.queryItems = queryItems.isEmpty ? nil : queryItems
 
     return components.url
   }
+
 }
 
 

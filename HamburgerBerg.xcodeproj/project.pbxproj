@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B00AFC6126E0085E00CD6665 /* HamburgerBergApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */; };
-		B00AFC6326E0085E00CD6665 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC6226E0085E00CD6665 /* ContentView.swift */; };
+		B00AFC6326E0085E00CD6665 /* ListBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC6226E0085E00CD6665 /* ListBeerView.swift */; };
 		B00AFC6526E0086300CD6665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC6426E0086300CD6665 /* Assets.xcassets */; };
 		B00AFC6826E0086300CD6665 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC6726E0086300CD6665 /* Preview Assets.xcassets */; };
 		B00AFC7326E0086300CD6665 /* HamburgerBergTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC7226E0086300CD6665 /* HamburgerBergTests.swift */; };
 		B00AFC7E26E0086300CD6665 /* HamburgerBergUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC7D26E0086300CD6665 /* HamburgerBergUITests.swift */; };
-		B00AFC8D26E00ECB00CD6665 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B00AFC8C26E00ECB00CD6665 /* Alamofire */; };
 		B00AFC9026E010C500CD6665 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B00AFC9226E010C500CD6665 /* Localizable.strings */; };
 		B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9526E012D000CD6665 /* PunkAPIService.swift */; };
 		B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9726E0132200CD6665 /* Endpoint.swift */; };
 		B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9C26E015FF00CD6665 /* Beer.swift */; };
 		B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFC9E26E0160B00CD6665 /* BeerID.swift */; };
 		B00AFCA226E019D700CD6665 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00AFCA126E019D700CD6665 /* Logger.swift */; };
+		B0597D2B26E2AC9B009178B1 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */; };
 		B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0697AAC26E22933003DAF5D /* BeerRowView.swift */; };
+		B0A7DBE026E23CF6001411B1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0A7DBDF26E23CF6001411B1 /* Alamofire */; };
 		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
 		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
 		B0EA825426E1226400A4190C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA825326E1226400A4190C /* EndpointTests.swift */; };
@@ -47,7 +48,7 @@
 /* Begin PBXFileReference section */
 		B00AFC5D26E0085E00CD6665 /* HamburgerBerg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HamburgerBerg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerBergApp.swift; sourceTree = "<group>"; };
-		B00AFC6226E0085E00CD6665 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B00AFC6226E0085E00CD6665 /* ListBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBeerView.swift; sourceTree = "<group>"; };
 		B00AFC6426E0086300CD6665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B00AFC6726E0086300CD6665 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B00AFC6926E0086300CD6665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		B00AFC9C26E015FF00CD6665 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		B00AFC9E26E0160B00CD6665 /* BeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerID.swift; sourceTree = "<group>"; };
 		B00AFCA126E019D700CD6665 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		B0697AAC26E22933003DAF5D /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
 		B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSerializingTests.swift; sourceTree = "<group>"; };
 		B0EA825026E115BA00A4190C /* BeerJSONExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerJSONExample.json; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B00AFC8D26E00ECB00CD6665 /* Alamofire in Frameworks */,
+				B0A7DBE026E23CF6001411B1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +193,7 @@
 		B0697AAB26E228F6003DAF5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B00AFC6226E0085E00CD6665 /* ContentView.swift */,
+				B00AFC6226E0085E00CD6665 /* ListBeerView.swift */,
 				B0697AAC26E22933003DAF5D /* BeerRowView.swift */,
 			);
 			path = Views;
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EA825926E1822000A4190C /* ListViewModel.swift */,
+				B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -255,7 +258,7 @@
 			);
 			name = HamburgerBerg;
 			packageProductDependencies = (
-				B00AFC8C26E00ECB00CD6665 /* Alamofire */,
+				B0A7DBDF26E23CF6001411B1 /* Alamofire */,
 			);
 			productName = HamburgerBerg;
 			productReference = B00AFC5D26E0085E00CD6665 /* HamburgerBerg.app */;
@@ -330,7 +333,7 @@
 			);
 			mainGroup = B00AFC5426E0085E00CD6665;
 			packageReferences = (
-				B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B00AFC5E26E0085E00CD6665 /* Products */;
 			projectDirPath = "";
@@ -378,9 +381,10 @@
 			files = (
 				B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */,
 				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
+				B0597D2B26E2AC9B009178B1 /* ViewModelProtocol.swift in Sources */,
 				B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */,
 				B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */,
-				B00AFC6326E0085E00CD6665 /* ContentView.swift in Sources */,
+				B00AFC6326E0085E00CD6665 /* ListBeerView.swift in Sources */,
 				B00AFCA226E019D700CD6665 /* Logger.swift in Sources */,
 				B00AFC9826E0132200CD6665 /* Endpoint.swift in Sources */,
 				B0EA825A26E1822000A4190C /* ListViewModel.swift in Sources */,
@@ -604,7 +608,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4T2P735RZ;
 				INFOPLIST_FILE = HamburgerBergTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,7 +630,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4T2P735RZ;
 				INFOPLIST_FILE = HamburgerBergTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,7 +726,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
@@ -733,9 +737,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B00AFC8C26E00ECB00CD6665 /* Alamofire */ = {
+		B0A7DBDF26E23CF6001411B1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B00AFC8B26E00ECB00CD6665 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

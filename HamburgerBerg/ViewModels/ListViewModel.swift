@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-final class ListViewModel: ObservableObject {
+final class ListViewModel: ObservableObject, ViewModelProtocol {
   // MARK: - Properties
   private var cancellables = Set<AnyCancellable>()
   private let punkAPIService: PunkServiceProtocol
@@ -33,7 +33,7 @@ final class ListViewModel: ObservableObject {
       }
     } receiveValue: { [weak self] beers in
       self?.beers = beers
-      beerLog("Beers sucessfully fetched", .networking, .info)
+      beerLog("Beers successfully fetched", .networking, .info)
     }
     .store(in: &cancellables)
   }
