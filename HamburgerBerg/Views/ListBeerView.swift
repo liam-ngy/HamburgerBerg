@@ -6,17 +6,22 @@ struct ListBeerView: View {
   var viewModel: ListViewModel
 
   var body: some View {
-    List(viewModel.beers, id: \.id) { beer in
-      BeerRowView(
-        title: beer.name,
-        description: beer.description,
-        imageURL: beer.imageURL
-      )
+    switch viewModel.beers {
+    case let .success(result):
+      List(result, id: \.id) { beer in
+        BeerRowView(
+          title: beer.name,
+          description: beer.description,
+          imageURL: beer.imageURL
+        )
+      }
+      .refreshable {
+        viewModel.refetchBeers()
+      }
+    case .failure:
+      // TODO: Add failure case
+      EmptyView()
     }
-    .refreshable {
-      viewModel.refetchBeers()
-    }
-
   }
 }
 

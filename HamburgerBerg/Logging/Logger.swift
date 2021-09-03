@@ -15,6 +15,16 @@ enum LogCategory: String {
   case networking = "Networking"
 }
 
+private extension OSLogType {
+  var emoji: String {
+    switch self {
+    case .info: return "ℹ️ "
+    case .error: return "❌ "
+    default: return "🐼 "
+    }
+  }
+}
+
 func beerLog(
   _ message: String,
   function: String = #function,
@@ -23,15 +33,7 @@ func beerLog(
   _ category: LogCategory = .default,
   _ type: OSLogType = .default
 ) {
-
-  let emoji: String
-  if type == .info {
-    emoji = "ℹ️ "
-  } else {
-    emoji = ""
-  }
-
-  let newMessage = emoji + message
+  let newMessage = type.emoji + message
 
   os_log(
     "[%{public}@/%{public}@:%{public}@] %{public}@",

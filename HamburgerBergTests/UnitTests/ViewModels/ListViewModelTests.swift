@@ -8,8 +8,12 @@ final class ListViewModelTests: XCTestCase {
     let sut = ListViewModel(service: .stubPunk(isSuccess: true))
 
     // When
-    XCTAssertNil(sut.error)
-    XCTAssertEqual(sut.beers, .stub)
+    switch sut.beers {
+    case let .success(result):
+      XCTAssertEqual(result, .stub)
+    case let .failure(error):
+      XCTFail("Expected success but failed with \(error)")
+    }
   }
 
   func test_sut_fetchBeers_resultIsFailure_setBeersProperty() throws {
@@ -17,8 +21,11 @@ final class ListViewModelTests: XCTestCase {
     let sut = ListViewModel(service: .stubPunk(isSuccess: false))
 
     // When
-    XCTAssertNotNil(sut.error, "\(sut.error)")
-    XCTAssertEqual(sut.beers, [])
+    switch sut.beers {
+    case let .success(result):
+      XCTFail("Expected failure but got \(result)")
+    case .failure: break
+    }
   }
 
 }

@@ -8,10 +8,7 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
   private let punkAPIService: PunkServiceProtocol
 
   @Published
-  private(set) var beers: [Beer] = []
-
-  @Published
-  private(set) var error: AFError?
+  private(set) var beers: Result<[Beer], AFError> = .success([])
 
   // MARK: - Initializer
 
@@ -35,11 +32,11 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
         // TODO: Show error message to user
       case let .failure(error):
         beerLog("Beers failed to fetched with \(error)", .networking, .error)
-        self?.error = error
+        self?.beers = .failure(error)
       }
     } receiveValue: { [weak self] beers in
-      self?.beers = beers
       beerLog("Beers successfully fetched", .networking, .info)
+      self?.beers = .success(beers)
     }
     .store(in: &cancellables)
   }
