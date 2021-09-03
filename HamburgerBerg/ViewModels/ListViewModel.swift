@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import Alamofire
 
 final class ListViewModel: ObservableObject, ViewModelProtocol {
   // MARK: - Properties
@@ -8,6 +9,9 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
 
   @Published
   private(set) var beers: [Beer] = []
+
+  @Published
+  private(set) var error: AFError?
 
   // MARK: - Initializer
 
@@ -25,11 +29,13 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
   }
 
   private func fetchBeers() {
-    punkAPIService.fetchBeers().sink { completion in
+    punkAPIService.fetchBeers().sink { [weak self] completion in
       switch completion {
       case .finished: break
         // TODO: Show error message to user
-      case let .failure(error): print(error)
+      case let .failure(error):
+        beerLog("Beers failed to fetched with \(error)", .networking, .error)
+        self?.error = error
       }
     } receiveValue: { [weak self] beers in
       self?.beers = beers

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ViewModelProtocol { }
+protocol ViewModelProtocol: AnyObject { }
 
 extension ViewModelProtocol where Self == ListViewModel {
   static var list: ListViewModel {

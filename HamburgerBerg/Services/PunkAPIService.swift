@@ -7,7 +7,7 @@ import Foundation
 // https://github.com/WeTransfer/Mocker#alamofire
 
 
-protocol PunkServiceProtocol {
+protocol PunkServiceProtocol: AnyObject {
   func fetchBeers() -> AnyPublisher<[Beer], AFError>
 }
 
