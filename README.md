@@ -29,6 +29,9 @@
 - Make use of Assercatalog (darkmode, color, design elements)
 - etc.
 
+## How to install?
+Download Xcode 12 beta 5 and run the app on the iOS 15 Simulator. There could be some problems, because I coded it in the `M1` machine.
+
 ## How to run tests?
 In the original state there were 3 different schemes (`HamburgerBerg`, `UnitTests` and `UITests`)
 For running all tests in the app select `HamburgBerg` and press `cmd + u`.
