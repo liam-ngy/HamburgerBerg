@@ -15,15 +15,14 @@ struct ListBeerView: View {
           } label: {
             BeerRowView(viewModel: beer)
           }
-
         }
         .onAppear {viewModel.fetchBeers() }
         .refreshable{ viewModel.fetchBeers() }
-        .navigationTitle(Text("Beers", comment: "Navigation title for full list of beer"))
+        .navigationTitle(Text("List of beer", comment: "Navigation title for full list of beer"))
       }
     case .failure:
-      // TODO: Add failure case
-      EmptyView()
+      Text("Something went wrong!")
+        .foregroundColor(.red)
     }
   }
 
