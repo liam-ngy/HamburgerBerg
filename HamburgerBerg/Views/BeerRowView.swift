@@ -64,7 +64,7 @@ struct BeerRowView: View {
 
       Spacer()
     }
-    .frame(height: Config.Frame.height)
+    .frame(minHeight: Config.Frame.height)
   }
 }
 

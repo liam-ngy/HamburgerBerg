@@ -1,5 +1,7 @@
 import Foundation
 
+// MARK: - Model
+
 struct Beer: Decodable, Equatable {
   let id: BeerID
   let name: String
@@ -7,7 +9,6 @@ struct Beer: Decodable, Equatable {
   let firstBrewed: Date
   let description: String
   let abv: Double
-//  let ibu: Double?
   let imageURL: URL
 }
 
@@ -24,6 +25,8 @@ extension BeerSerializingError: LocalizedError {
     }
   }
 }
+
+// MARK: - Decoding
 
 extension Beer {
   private static var dateFormatter: DateFormatter {
@@ -62,5 +65,21 @@ extension Beer {
     let imageURLString = try container.decode(String.self, forKey: .imageURL)
     guard let imageURL = URL(string: imageURLString) else { throw BeerSerializingError.invalidURL }
     self.imageURL = imageURL
+  }
+}
+
+// MARK: - Stub
+
+extension Beer {
+  static var stub: Beer {
+    .init(
+      id: 1,
+      name: "Thailand",
+      tagline: "Sawadi",
+      firstBrewed: .distantPast,
+      description: "blabla",
+      abv: 49.9,
+      imageURL: URL(string: "https://www.thailand.com")!
+    )
   }
 }

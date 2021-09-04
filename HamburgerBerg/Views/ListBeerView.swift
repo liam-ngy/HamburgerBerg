@@ -11,7 +11,7 @@ struct ListBeerView: View {
       NavigationView {
         List(result, id: \.id) { beer in
           NavigationLink {
-            EmptyView()
+            BeerView(viewModel: beer)
           } label: {
             BeerRowView(viewModel: beer)
           }
