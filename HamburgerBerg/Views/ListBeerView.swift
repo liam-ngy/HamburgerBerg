@@ -10,11 +10,16 @@ struct ListBeerView: View {
     case let .success(result):
       NavigationView {
         List(result, id: \.id) { beer in
-          BeerRowView(
-            title: beer.name,
-            description: beer.description,
-            imageURL: beer.imageURL
-          )
+          NavigationLink {
+            EmptyView()
+          } label: {
+            BeerRowView(
+              title: beer.name,
+              description: beer.description,
+              imageURL: beer.imageURL
+            )
+          }
+
         }
         .onAppear {viewModel.fetchBeers() }
         .refreshable{ viewModel.fetchBeers() }
