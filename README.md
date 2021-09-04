@@ -1,5 +1,18 @@
 # HamburgerBerg
 
+## User perspective: What could be added or improved?
+- Dark mode 
+- Proper design with animation
+- Search for beer by name
+- Filter beer with some properties
+- Add beer of the day
+- Favorite a beer
+- Offline ussage
+- Add more accessbility (e.g. announce voice over when something changed)
+- Long press on one element in list gives you a preview of the detailed page
+- Rating system for a beer
+- etc.
+
 ## Technical perspective: What could be added or improved?
 - Add more Unit tests
 - Add UI test 
@@ -13,6 +26,7 @@
 - SwiftLint
 - SwiftUIPreviews for different devices, color scheme and dark mode
 - Snapshot test for designer with different font sizes
+- Make use of Assercatalog (darkmode, color, design elements)
 - etc.
 
 ## Simple prototype
