@@ -29,6 +29,11 @@
 - Make use of Assercatalog (darkmode, color, design elements)
 - etc.
 
+## How to run tests?
+In the original state there were 3 different schemes (`HamburgerBerg`, `UnitTests` and `UITests`)
+For running all tests in the app select `HamburgBerg` and press `cmd + u`.
+My reason to have different schemes to run only specific tests that I care. When I develop a feature or refactor something, I only want to run the unit tests. In the future you could add scheme `SnapshotTests`.
+
 ## Simple prototype
 ![Simulator Screen Shot - iPhone 12 Pro - 2021-09-05 at 01 20 33](https://user-images.githubusercontent.com/8395044/132110241-9e49cdfb-036e-4bdb-8e10-a4f3121f968b.png)
 
