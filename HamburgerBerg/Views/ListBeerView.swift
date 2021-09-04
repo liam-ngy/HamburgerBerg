@@ -31,6 +31,6 @@ struct ListBeerView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ListBeerView(viewModel: .list)
+    ListBeerView(viewModel: ListViewModel())
   }
 }

@@ -2,7 +2,7 @@ import Foundation
 import Combine
 import Alamofire
 
-final class ListViewModel: ObservableObject, ViewModelProtocol {
+final class ListViewModel: ObservableObject {
   // MARK: - Properties
   private var cancellables = Set<AnyCancellable>()
   private let punkAPIService: PunkServiceProtocol

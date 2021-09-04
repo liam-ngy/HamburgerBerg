@@ -23,7 +23,6 @@
 		B0182DDC26E3C1ED0096535E /* invalidBeerJSONURL.json in Resources */ = {isa = PBXBuildFile; fileRef = B0182DDB26E3C1ED0096535E /* invalidBeerJSONURL.json */; };
 		B0182DDE26E3DB200096535E /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0182DDD26E3DB200096535E /* BeerViewModel.swift */; };
 		B0182DE026E3F0C10096535E /* BeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0182DDF26E3F0C10096535E /* BeerView.swift */; };
-		B0597D2B26E2AC9B009178B1 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */; };
 		B0597D2E26E2B5C2009178B1 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2D26E2B5C2009178B1 /* ListViewModelTests.swift */; };
 		B0597D3026E2B609009178B1 /* StubPunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2F26E2B609009178B1 /* StubPunkAPIService.swift */; };
 		B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0697AAC26E22933003DAF5D /* BeerRowView.swift */; };
@@ -76,7 +75,6 @@
 		B0182DDB26E3C1ED0096535E /* invalidBeerJSONURL.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalidBeerJSONURL.json; sourceTree = "<group>"; };
 		B0182DDD26E3DB200096535E /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
 		B0182DDF26E3F0C10096535E /* BeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerView.swift; sourceTree = "<group>"; };
-		B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		B0597D2D26E2B5C2009178B1 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		B0597D2F26E2B609009178B1 /* StubPunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubPunkAPIService.swift; sourceTree = "<group>"; };
 		B0697AAC26E22933003DAF5D /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				B0EA825926E1822000A4190C /* ListViewModel.swift */,
-				B0597D2A26E2AC9B009178B1 /* ViewModelProtocol.swift */,
 				B0182DDD26E3DB200096535E /* BeerViewModel.swift */,
 			);
 			path = ViewModels;
@@ -423,7 +420,6 @@
 				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
 				B0182DE026E3F0C10096535E /* BeerView.swift in Sources */,
 				B0182DDE26E3DB200096535E /* BeerViewModel.swift in Sources */,
-				B0597D2B26E2AC9B009178B1 /* ViewModelProtocol.swift in Sources */,
 				B00AFC9D26E015FF00CD6665 /* Beer.swift in Sources */,
 				B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */,
 				B00AFC6326E0085E00CD6665 /* ListBeerView.swift in Sources */,
