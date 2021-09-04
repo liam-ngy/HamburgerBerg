@@ -14,18 +14,12 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
 
   init(service: PunkServiceProtocol = PunkAPIService()) {
     self.punkAPIService = service
-
-    fetchBeers()
   }
 
   // MARK: - Methods
 
-  func refetchBeers() {
+  func fetchBeers() {
     beerLog("Beers are being refetched", .networking, .info)
-    fetchBeers()
-  }
-
-  private func fetchBeers() {
     punkAPIService.fetchBeers().sink { [weak self] completion in
       switch completion {
       case .finished: break

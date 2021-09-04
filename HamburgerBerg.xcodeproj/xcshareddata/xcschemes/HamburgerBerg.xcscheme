@@ -20,6 +20,34 @@
                ReferencedContainer = "container:HamburgerBerg.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B00AFC6D26E0086300CD6665"
+               BuildableName = "HamburgerBergTests.xctest"
+               BlueprintName = "HamburgerBergTests"
+               ReferencedContainer = "container:HamburgerBerg.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B00AFC7826E0086300CD6665"
+               BuildableName = "HamburgerBergUITests.xctest"
+               BlueprintName = "HamburgerBergUITests"
+               ReferencedContainer = "container:HamburgerBerg.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -39,26 +67,6 @@
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B00AFC6D26E0086300CD6665"
-               BuildableName = "HamburgerBergTests.xctest"
-               BlueprintName = "HamburgerBergTests"
-               ReferencedContainer = "container:HamburgerBerg.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B00AFC7826E0086300CD6665"
-               BuildableName = "HamburgerBergUITests.xctest"
-               BlueprintName = "HamburgerBergUITests"
-               ReferencedContainer = "container:HamburgerBerg.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
