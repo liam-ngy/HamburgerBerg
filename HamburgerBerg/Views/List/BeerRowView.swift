@@ -31,7 +31,7 @@ struct BeerRowView: View {
           image.resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: Config.Image.square, height: Config.Image.square)
-            .accessibilityHidden(false) // Image doesn't add value for people who can't see.
+            .accessibilityHidden(true) // Image doesn't add value for people who can't see.
 
         case .failure:
           Image(systemName: "fire")

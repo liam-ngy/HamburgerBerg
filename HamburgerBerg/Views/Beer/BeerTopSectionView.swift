@@ -22,7 +22,7 @@ struct BeerTopSectionView: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: Config.Image.width)
             .padding()
-            .accessibilityHidden(false) // Image doesn't add value for people who can't see.
+            .accessibilityHidden(true) // Image doesn't add value for people who can't see.
 
         case .failure:
           Image(systemName: "fire")
