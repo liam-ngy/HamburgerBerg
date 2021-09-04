@@ -2,7 +2,7 @@
 
 ## Foreword
 Since there were not restritioncs or detailed requirements, I tried to focus on the technical part and kept my code clean as possible.
-Simplified structure, write testable components. At the beginning I defined quite a few features that I wanted to add, but at some point I realized, that I don't have that much time therefore the focus is on Clean code, Unit tests and Accessbility. My current code style would be SwiftUI, Combine (Reactive) and try to use pure methods, but it doesn't work always like that because of `ObserverableObject`. But I had the feeling when I would use redux, it would be definitely overengineered. 
+Simplified structure, write testable components. At the beginning I defined quite a few features that I wanted to add, but at some point I realized, that I don't have that much time therefore the focus is on Clean code, Unit tests and Accessbility. My current code style would be SwiftUI, Combine (Reactive) and "Functional Programming", but it doesn't work always like that because of `ObserverableObject`. But I had the feeling when I would use redux, it would be definitely overengineered. 
 In the end I didn't care so much about a fancy UI and decided to just prototype the App. ;)
 
 ## User perspective: What could be added or improved?
