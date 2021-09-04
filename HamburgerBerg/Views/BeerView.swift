@@ -47,7 +47,6 @@ struct BeerView: View {
           VStack {
             Text(viewModel.description)
               .padding()
-            Spacer()
           }
         }
 
@@ -74,6 +73,10 @@ struct BeerView: View {
           )
             .font(Font.title).bold()
             .foregroundStyle(.secondary)
+
+          ForEach(values: viewModel.foodPairing) {
+            Text($0)
+          }
         }
         .padding(.leading, 16)
 

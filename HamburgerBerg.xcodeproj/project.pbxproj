@@ -27,6 +27,7 @@
 		B0597D2E26E2B5C2009178B1 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2D26E2B5C2009178B1 /* ListViewModelTests.swift */; };
 		B0597D3026E2B609009178B1 /* StubPunkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0597D2F26E2B609009178B1 /* StubPunkAPIService.swift */; };
 		B0697AAD26E22933003DAF5D /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0697AAC26E22933003DAF5D /* BeerRowView.swift */; };
+		B06B5B5826E406CA001BED2E /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06B5B5726E406CA001BED2E /* ForEach.swift */; };
 		B0A7DBE026E23CF6001411B1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0A7DBDF26E23CF6001411B1 /* Alamofire */; };
 		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
 		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
@@ -79,6 +80,7 @@
 		B0597D2D26E2B5C2009178B1 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		B0597D2F26E2B609009178B1 /* StubPunkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubPunkAPIService.swift; sourceTree = "<group>"; };
 		B0697AAC26E22933003DAF5D /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
+		B06B5B5726E406CA001BED2E /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
 		B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSerializingTests.swift; sourceTree = "<group>"; };
 		B0EA825026E115BA00A4190C /* BeerJSONExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BeerJSONExample.json; sourceTree = "<group>"; };
 		B0EA825326E1226400A4190C /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				B00AFC6926E0086300CD6665 /* Info.plist */,
 				B00AFC6026E0085E00CD6665 /* HamburgerBergApp.swift */,
 				B00AFC6426E0086300CD6665 /* Assets.xcassets */,
+				B06B5B5626E406B7001BED2E /* Extensions */,
 				B00AFCA026E019CB00CD6665 /* Logging */,
 				B00AFC9B26E0155500CD6665 /* Models */,
 				B00AFC6626E0086300CD6665 /* Preview Content */,
@@ -218,6 +221,14 @@
 				B0182DDF26E3F0C10096535E /* BeerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B06B5B5626E406B7001BED2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B06B5B5726E406CA001BED2E /* ForEach.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B0EA824B26E1153A00A4190C /* Serializing */ = {
@@ -407,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06B5B5826E406CA001BED2E /* ForEach.swift in Sources */,
 				B00AFC9F26E0160B00CD6665 /* BeerID.swift in Sources */,
 				B00AFC9626E012D000CD6665 /* PunkAPIService.swift in Sources */,
 				B0182DE026E3F0C10096535E /* BeerView.swift in Sources */,

@@ -37,6 +37,8 @@ extension Collection where Element == Beer {
       tagline: "Sawadi",
       firstBrewed: .distantPast,
       description: "blabla",
+      abv: 14.3,
+      foodPairing: ["None", "Food", "Summerrolls"],
       imageURL: URL(string: "https://www.thailand.com")!
     )
 
@@ -46,6 +48,8 @@ extension Collection where Element == Beer {
       tagline: "Konichiwa",
       firstBrewed: .distantPast,
       description: "blabla",
+      abv: 12.3,
+      foodPairing: ["Rice", "Food", "Summerrolls"],
       imageURL: URL(string: "https://www.japan.com")!
     )
 
@@ -55,9 +59,18 @@ extension Collection where Element == Beer {
       tagline: "Sauerkraut",
       firstBrewed: .distantPast,
       description: "blabla",
+      abv: 13.3,
+      foodPairing: ["Rice", "Food", "Summerrolls"],
       imageURL: URL(string: "https://www.germany.com")!
     )
 
     return [beer1, beer2, beer3]
+  }
+}
+
+extension Collection where Element == BeerViewModel {
+  static var stub: [BeerViewModel] {
+    let beers: [Beer] = .stub
+    return beers.map { BeerViewModel(model: $0) }
   }
 }

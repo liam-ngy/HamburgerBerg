@@ -9,6 +9,7 @@ struct Beer: Decodable, Equatable {
   let firstBrewed: Date
   let description: String
   let abv: Double
+  let foodPairing: [String]
   let imageURL: URL
 }
 
@@ -43,6 +44,7 @@ extension Beer {
     case firstBrewed = "first_brewed"
     case description
     case abv
+    case foodPairing = "food_pairing"
     case imageURL = "image_url"
   }
 
@@ -61,6 +63,7 @@ extension Beer {
     description = try container.decode(String.self, forKey: .description)
 
     abv = try container.decode(Double.self, forKey: .abv)
+    foodPairing = try container.decode([String].self, forKey: .foodPairing)
 
     let imageURLString = try container.decode(String.self, forKey: .imageURL)
     guard let imageURL = URL(string: imageURLString) else { throw BeerSerializingError.invalidURL }
@@ -79,6 +82,7 @@ extension Beer {
       firstBrewed: .distantPast,
       description: "blabla",
       abv: 49.9,
+      foodPairing: ["Legga", "Marmelade", "Salz"],
       imageURL: URL(string: "https://www.thailand.com")!
     )
   }

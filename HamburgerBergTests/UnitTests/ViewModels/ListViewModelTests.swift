@@ -8,6 +8,8 @@ final class ListViewModelTests: XCTestCase {
     let sut = ListViewModel(service: .stubPunk(isSuccess: true))
 
     // When
+    sut.fetchBeers()
+    // Then
     switch sut.beers {
     case let .success(result):
       XCTAssertEqual(result, .stub)
@@ -21,6 +23,9 @@ final class ListViewModelTests: XCTestCase {
     let sut = ListViewModel(service: .stubPunk(isSuccess: false))
 
     // When
+    sut.fetchBeers()
+
+    // Then
     switch sut.beers {
     case let .success(result):
       XCTFail("Expected failure but got \(result)")
