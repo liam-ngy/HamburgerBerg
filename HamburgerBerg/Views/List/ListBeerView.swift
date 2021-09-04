@@ -14,15 +14,18 @@ struct ListBeerView: View {
             BeerView(viewModel: beer)
           } label: {
             BeerRowView(viewModel: beer)
-              .accessibilityHint(Text("Action will perform to go to a detailed beer page"))
+              .accessibilityHint(Text("Detailed Button Action"))
           }
         }
+        // Beer will be fetched when user is on the list page.
+        // That means if the user on details page and coming back, beer will be refetched.
+        // Optimal solution: Only fetch one
         .onAppear {viewModel.fetchBeers() }
         .refreshable{ viewModel.fetchBeers() }
         .navigationTitle(Text("List of beer"))
       }
     case .failure:
-      Text("Something went wrong!")
+      Text("Something went wrong")
         .foregroundColor(.red)
     }
   }

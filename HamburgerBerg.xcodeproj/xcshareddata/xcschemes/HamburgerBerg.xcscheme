@@ -35,7 +35,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -74,16 +74,6 @@
                BlueprintIdentifier = "B00AFC6D26E0086300CD6665"
                BuildableName = "HamburgerBergTests.xctest"
                BlueprintName = "HamburgerBergTests"
-               ReferencedContainer = "container:HamburgerBerg.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B00AFC7826E0086300CD6665"
-               BuildableName = "HamburgerBergUITests.xctest"
-               BlueprintName = "HamburgerBergUITests"
                ReferencedContainer = "container:HamburgerBerg.xcodeproj">
             </BuildableReference>
          </TestableReference>
