@@ -67,9 +67,3 @@ struct BeerRowView: View {
     .frame(minHeight: Config.Frame.height)
   }
 }
-
-//struct BeerRowView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    BeerRowView(title: "Alsterwasser", tagline: "beer beer beer beer beer beer beer", firstBrewedDate: "", imageURL: URL(string: "https://images.punkapi.com/v2/192.png"))
-//  }
-//}

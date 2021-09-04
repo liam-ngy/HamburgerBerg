@@ -18,7 +18,7 @@ struct ListBeerView: View {
         }
         .onAppear {viewModel.fetchBeers() }
         .refreshable{ viewModel.fetchBeers() }
-        .navigationTitle(Text("List of beer", comment: "Navigation title for full list of beer"))
+        .navigationTitle(Text("List of beer"))
       }
     case .failure:
       Text("Something went wrong!")

@@ -220,9 +220,8 @@
 		B0697AAB26E228F6003DAF5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0DAE4F026E41F230049ECA6 /* List */,
 				B06B5B5926E41681001BED2E /* Beer */,
-				B00AFC6226E0085E00CD6665 /* ListBeerView.swift */,
-				B0697AAC26E22933003DAF5D /* BeerRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,6 +243,15 @@
 				B06B5B6226E41BF9001BED2E /* BeerTopSectionView.swift */,
 			);
 			path = Beer;
+			sourceTree = "<group>";
+		};
+		B0DAE4F026E41F230049ECA6 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B00AFC6226E0085E00CD6665 /* ListBeerView.swift */,
+				B0697AAC26E22933003DAF5D /* BeerRowView.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		B0EA824B26E1153A00A4190C /* Serializing */ = {
