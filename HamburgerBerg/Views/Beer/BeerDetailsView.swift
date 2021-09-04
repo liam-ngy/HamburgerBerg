@@ -12,6 +12,7 @@ struct BeerDetailsView: View {
       )
         .font(Font.title).bold()
         .foregroundStyle(.secondary)
+        .accessibilityAddTraits(.isHeader)
       
       Text("**abv:** \(formattedAbv)")
       Text("**First time brewed:** \(formattedFirstBrewed)")

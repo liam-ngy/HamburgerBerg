@@ -11,9 +11,10 @@ struct FoodsPairingView: View {
           .font(Font.title).bold()
           .foregroundStyle(.secondary)
           .padding(.top, 16)
+          .accessibilityAddTraits(.isHeader)
 
         ForEach(values: foodPairing) {
-          Text("🍾 \($0)")
+          Text("- \($0)")
         }
       }
     }

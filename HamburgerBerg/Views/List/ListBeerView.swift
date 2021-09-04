@@ -14,6 +14,7 @@ struct ListBeerView: View {
             BeerView(viewModel: beer)
           } label: {
             BeerRowView(viewModel: beer)
+              .accessibilityHint(Text("Action will perform to go to a detailed beer page"))
           }
         }
         .onAppear {viewModel.fetchBeers() }

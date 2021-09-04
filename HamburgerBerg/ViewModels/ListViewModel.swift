@@ -1,6 +1,7 @@
 import Foundation
 import Combine
 import Alamofire
+import SwiftUI
 
 final class ListViewModel: ObservableObject {
   // MARK: - Properties
@@ -30,7 +31,7 @@ final class ListViewModel: ObservableObject {
       }
     } receiveValue: { [weak self] beers in
       beerLog("Beers successfully fetched", .networking, .info)
-
+      self?.announce(result: beers.count)
       // Note: O(n + m) where n and m are the list of beer.
       // The time complexity can be improved by sending single beer to the upstream and
       // transform it to a `BeerViewModel` but it's not necessary.
@@ -38,5 +39,16 @@ final class ListViewModel: ObservableObject {
       self?.beers = .success(mappedViewModels)
     }
     .store(in: &cancellables)
+  }
+
+  // MARK: - Accessibility
+
+
+  private func announce(result: Int) {
+    if UIAccessibility.isVoiceOverRunning {
+      // Couldn't test it on real device. But it's a good practice to announce a message,
+      // when something on the screen changed.
+      UIAccessibility.post(notification: .announcement, argument: "\(result) are successfully fetched")
+    }
   }
 }
