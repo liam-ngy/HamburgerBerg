@@ -13,11 +13,7 @@ struct ListBeerView: View {
           NavigationLink {
             EmptyView()
           } label: {
-            BeerRowView(
-              title: beer.name,
-              description: beer.description,
-              imageURL: beer.imageURL
-            )
+            BeerRowView(viewModel: beer)
           }
 
         }

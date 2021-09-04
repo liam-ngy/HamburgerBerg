@@ -8,7 +8,7 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
   private let punkAPIService: PunkServiceProtocol
 
   @Published
-  private(set) var beers: Result<[Beer], AFError> = .success([])
+  private(set) var beers: Result<[BeerViewModel], AFError> = .success([])
 
   // MARK: - Initializer
 
@@ -30,7 +30,12 @@ final class ListViewModel: ObservableObject, ViewModelProtocol {
       }
     } receiveValue: { [weak self] beers in
       beerLog("Beers successfully fetched", .networking, .info)
-      self?.beers = .success(beers)
+
+      // Note: O(n + m) where n and m are the list of beer.
+      // The time complexity can be improved by sending single beer to the upstream and
+      // transform it to a `BeerViewModel` but it's not necessary.
+      let mappedViewModels = beers.map { BeerViewModel(model: $0) }
+      self?.beers = .success(mappedViewModels)
     }
     .store(in: &cancellables)
   }

@@ -2,10 +2,10 @@ import SwiftUI
 
 private enum Config {
   enum Image {
-    static let square: CGFloat = 100
+    static let square: CGFloat = 64
   }
   enum Frame {
-    static let height: CGFloat = 128
+    static let height: CGFloat = 100
   }
 
   enum Text {
@@ -18,13 +18,11 @@ private enum Config {
 }
 
 struct BeerRowView: View {
-  let title: String
-  let description: String
-  let imageURL: URL?
+  let viewModel: BeerViewModel
 
   var body: some View {
     HStack {
-      AsyncImage(url: imageURL) { phase in
+      AsyncImage(url: viewModel.imageURL) { phase in
         switch phase {
         case .empty:
           ProgressView()
@@ -47,10 +45,19 @@ struct BeerRowView: View {
         .frame(width: Config.Space.distance, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 
       VStack(alignment: .leading) {
-        Text(title)
+        Text(viewModel.title)
           .font(.headline)
 
-        Text(description)
+        Text(viewModel.tagline)
+          .lineLimit(Config.Text.lineNumbers)
+          .padding(.bottom, 8)
+
+        Text("**abv:** \(viewModel.formattedAbv)")
+          .font(.caption2)
+          .lineLimit(Config.Text.lineNumbers)
+
+
+        Text("**First time brewed:** \(viewModel.formattedFirstBrewed)")
           .font(.caption2)
           .lineLimit(Config.Text.lineNumbers)
       }
@@ -61,8 +68,8 @@ struct BeerRowView: View {
   }
 }
 
-struct BeerRowView_Previews: PreviewProvider {
-  static var previews: some View {
-    BeerRowView(title: "Alsterwasser", description: "beer beer beer beer beer beer beer", imageURL: URL(string: "https://images.punkapi.com/v2/192.png"))
-  }
-}
+//struct BeerRowView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    BeerRowView(title: "Alsterwasser", tagline: "beer beer beer beer beer beer beer", firstBrewedDate: "", imageURL: URL(string: "https://images.punkapi.com/v2/192.png"))
+//  }
+//}
