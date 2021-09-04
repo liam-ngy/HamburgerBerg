@@ -24,7 +24,6 @@ final class ListViewModel: ObservableObject {
     punkAPIService.fetchBeers().sink { [weak self] completion in
       switch completion {
       case .finished: break
-        // TODO: Show error message to user
       case let .failure(error):
         beerLog("Beers failed to fetched with \(error)", .networking, .error)
         self?.beers = .failure(error)
