@@ -1,5 +1,10 @@
 # HamburgerBerg
 
+## Foreword
+Since there were not restritioncs or detailed requirements, I tried to focus on the technical part and kept my code clean as possible.
+Simplified structure, write testable components. At the beginning I defined quite a few features that I wanted to add, but at some point I realized, that I don't have that much time therefore the focus is on Clean code, Unit tests and Accessbility. My current code style would be SwiftUI, Combine (Reactive) and try to use pure methods, but it doesn't work always like that because of `ObserverableObject`. But I had the feeling when I would use redux, it would be definitely overengineered. 
+In the end I didn't care so much about a fancy UI and decided to just prototype the App. ;)
+
 ## User perspective: What could be added or improved?
 - Dark mode 
 - Proper design with animation
@@ -28,6 +33,11 @@
 - Snapshot test for designer with different font sizes
 - Make use of Assercatalog (darkmode, color, design elements)
 - etc.
+
+
+
+## Architecture 
+I used MVVM but it could be just simpy Model, Services and View. As long the business logic is extracted in different components and is testable it doesn't matter which architecture you use. But you should always be careful to not overcomplicate things: E.g. Modulize to much when it's not needed.
 
 ## Packages I used (Alamofire)
 There are pro and cons for both options. Normally I'm big fan of creating my own Network Service especially when it's a new starting project. Normally we should really be cautious when implementing a new Dependency. We have to think about the maintenance, code quality, continuous development and so on. But in the case of Alamofire it's well maintained, widely used and especially it's tested. If I choose to create my own Network Layer, I've really to think through how I want to build my Network layer, that can cause bugs, cost time etc.
