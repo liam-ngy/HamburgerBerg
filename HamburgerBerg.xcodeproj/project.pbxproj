@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,7 +30,6 @@
 		B06B5B5D26E41964001BED2E /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06B5B5C26E41964001BED2E /* BeerDetailsView.swift */; };
 		B06B5B5F26E41B20001BED2E /* FoodsPairingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06B5B5E26E41B20001BED2E /* FoodsPairingView.swift */; };
 		B06B5B6326E41BF9001BED2E /* BeerTopSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06B5B6226E41BF9001BED2E /* BeerTopSectionView.swift */; };
-		B0A7DBE026E23CF6001411B1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B0A7DBDF26E23CF6001411B1 /* Alamofire */; };
 		B0EA824E26E1156C00A4190C /* BeerSerializingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA824D26E1156C00A4190C /* BeerSerializingTests.swift */; };
 		B0EA825126E115BA00A4190C /* BeerJSONExample.json in Resources */ = {isa = PBXBuildFile; fileRef = B0EA825026E115BA00A4190C /* BeerJSONExample.json */; };
 		B0EA825426E1226400A4190C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA825326E1226400A4190C /* EndpointTests.swift */; };
@@ -96,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A7DBE026E23CF6001411B1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +315,6 @@
 			);
 			name = HamburgerBerg;
 			packageProductDependencies = (
-				B0A7DBDF26E23CF6001411B1 /* Alamofire */,
 			);
 			productName = HamburgerBerg;
 			productReference = B00AFC5D26E0085E00CD6665 /* HamburgerBerg.app */;
@@ -365,8 +362,9 @@
 		B00AFC5526E0085E00CD6665 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					B00AFC5C26E0085E00CD6665 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -392,7 +390,6 @@
 			);
 			mainGroup = B00AFC5426E0085E00CD6665;
 			packageReferences = (
-				B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B00AFC5E26E0085E00CD6665 /* Products */;
 			projectDirPath = "";
@@ -544,6 +541,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -606,6 +604,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -792,25 +791,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
-			requirement = {
-				kind = exactVersion;
-				version = 5.4.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B0A7DBDF26E23CF6001411B1 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B0A7DBDE26E23CF6001411B1 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B00AFC5526E0085E00CD6665 /* Project object */;
 }
