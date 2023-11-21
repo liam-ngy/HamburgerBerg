@@ -20,8 +20,9 @@ struct ListBeerView: View {
         // Beer will be fetched when user is on the list page.
         // That means if the user on details page and coming back, beer will be refetched.
         // Optimal solution: Only fetch one
-        .onAppear {viewModel.fetchBeers() }
-        .refreshable{ viewModel.fetchBeers() }
+//        .onAppear {viewModel.fetchBeers() }
+        .task { await viewModel.fetchBeers() }
+        .refreshable{ Task { await viewModel.fetchBeers() } }
         .navigationTitle(Text("List of beer"))
       }
     case .failure:

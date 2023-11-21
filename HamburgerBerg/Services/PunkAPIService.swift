@@ -7,24 +7,32 @@ import Foundation
 // https://github.com/WeTransfer/Mocker#alamofire
 
 
-protocol PunkServiceProtocol: AnyObject {
-  func fetchBeers() -> AnyPublisher<[Beer], AFError>
+enum NetworkBeerError: Error {
+  case network
+  case invalidData
+  case invalidDecoding
 }
 
-final class PunkAPIService: PunkServiceProtocol {
-  @discardableResult
-  func fetchBeers() -> AnyPublisher<[Beer], AFError> {
-    beerLog("Start to fetch list of beer", .networking, .info)
+protocol PunkServiceProtocol {
+  func fetchBeers() async -> Result<[Beer], NetworkBeerError>
+}
 
-    guard let url =  Endpoint(path: [.beers], queryItems: []).url  else {
+struct PunkAPIService: PunkServiceProtocol {
+  func fetchBeers() async -> Result<[Beer], NetworkBeerError> {
+    guard let url = Endpoint(path: [.beers], queryItems: []).url  else {
       fatalError("App is ambiguous because of invalid beers url endpoint.")
     }
-
-    return AF.request(url, method: .get)
-      .validate(statusCode: 200..<300)
-      .validate(contentType: ["application/json"])
-      .publishDecodable(type: [Beer].self)
-      .value()
+    
+    guard let (data, _) = try? await URLSession.shared.data(from: url) else {
+      return .failure(.invalidData)
+    }
+    
+    guard let decodedResponse = try? JSONDecoder().decode([Beer].self, from: data) else {
+      return .failure(.invalidDecoding)
+    }
+    
+    return .success(decodedResponse)
+    
   }
 }
 
