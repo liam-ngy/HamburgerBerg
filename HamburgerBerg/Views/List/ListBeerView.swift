@@ -2,8 +2,8 @@ import SwiftUI
 import Combine
 
 struct ListBeerView: View {
-  @StateObject
   var viewModel: ListViewModel
+
 
   var body: some View {
     switch viewModel.beers {

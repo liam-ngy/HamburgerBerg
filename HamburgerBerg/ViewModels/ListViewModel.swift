@@ -1,12 +1,13 @@
 import Foundation
 import SwiftUI
+import Observation
 
 @MainActor
-final class ListViewModel: ObservableObject {
+@Observable
+final class ListViewModel {
   // MARK: - Properties
   private let punkAPIService: PunkServiceProtocol
 
-  @Published
   private(set) var beers: Result<[BeerViewModel], NetworkBeerError> = .success([])
 
   // MARK: - Initializer
@@ -19,12 +20,7 @@ final class ListViewModel: ObservableObject {
 
   func fetchBeers() async {
     beerLog("Beers are being refetched", .networking, .info)
-    switch await punkAPIService.fetchBeers() {
-    case .success(let beers):
-      self.beers = .success(beers.map { BeerViewModel(model: $0) })
-    case .failure(let error):
-      self.beers = .failure(error)
-    }
+    self.beers = await punkAPIService.fetchBeers().map { $0.map(BeerViewModel.init) }
   }
 
   // MARK: - Accessibility
@@ -38,3 +34,4 @@ final class ListViewModel: ObservableObject {
     }
   }
 }
+

@@ -1,5 +1,7 @@
 import Foundation
+import SwiftSyntax
 // Reference: https://www.swiftbysundell.com/articles/constructing-urls-in-swift/
+// TODO: Check for HTTPTypes introduced in WWDC 2023
 
 struct Endpoint {
   enum Version: String {

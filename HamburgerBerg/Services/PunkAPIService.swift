@@ -1,7 +1,7 @@
-import Alamofire
 import Combine
 import os.log
 import Foundation
+import Alamofire
 
 // Mock Alamofire response
 // https://github.com/WeTransfer/Mocker#alamofire
@@ -32,7 +32,6 @@ struct PunkAPIService: PunkServiceProtocol {
     }
     
     return .success(decodedResponse)
-    
   }
 }
 
